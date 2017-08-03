@@ -1,0 +1,21 @@
+
+<div class="jumbo velobicycle">
+  <div class="right"></div>
+  <h2>Welcome</h2>
+  <p>We hope you find exactly what you're looking.</p>
+  {{#link-to 'about' class="button"}}
+    About Us
+  {{/link-to}}
+</div>
+<div class="veloHistoryRent">
+     <h2>История аренды</h2>
+     <div class="row">
+        <div class="col col-thead">Имя арендатора</div>
+        <div class="col col-thead">Модель</div>
+        <div class="col col-thead">Точка аренды</div>
+        <div class="col col-thead">Продолжительность аренды</div> 
+        <div class="col col-thead none">Среднее время аренды по точке(часы)</div> 
+    </div>
+          {{history-listing history=model}}
+</div>
+

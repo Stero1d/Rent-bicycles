@@ -1,0 +1,8 @@
+<div class="velo-rent">  
+    <div class="button btn-history btn-general-history" {{action "generalHistory"}}>
+      {{#link-to 'general-history' class="button"}}
+        Общая история
+      {{/link-to}}
+    </div>
+</div> {{input value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter Rental Point"}}
+{{yield results}}

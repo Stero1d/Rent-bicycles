@@ -1,0 +1,29 @@
+<article class="listing">
+   <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{rental.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+ <h3{{action 'refreshModel'}}>{{#link-to "rentals.show" rental}}{{rental.title}}{{/link-to}} </h3>
+    <span class="button btn-rent">{{#link-to "rentals.show" rental}}Арендовать{{/link-to}}</span>
+  <div>
+    <div class="detail owner">
+      <span>Арендодатель:</span> {{rental.owner}}
+    </div>
+    <div class="detail type processRent hidden-block">
+      <span>В аренде</span>
+    </div>
+    <div class="detail type">
+      <span>Тип:</span> {{rental.type}}
+    </div>
+    <div class="detail location">
+      <span>Точка проката:</span> {{rental.rentalpoint}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Колличество скоростей:</span> {{rental.bedrooms}}
+    </div>
+  </div>
+  <!--<div class="detail owner">
+    <span class="button btn-rent">{{#link-to "rentals.show" rental}}Арендовать{{/link-to}}</span>
+  </div>-->
+  {{location-map location=rental.rentalpoint}}
+</article>
